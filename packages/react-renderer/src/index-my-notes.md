@@ -1,8 +1,6 @@
 ## overview
 
-* [entire page render entry](<packages/renderer-core/src/renderer/base.tsx>)
-
-[Render Module](https://lowcode-engine.cn/site/docs/guide/design/renderer), Used to render low-code Schema
+[Rendering module](https://lowcode-engine.cn/site/docs/guide/design/renderer)，Rendering for low-code schemas
 
 ## Rendering framework principle
 >
