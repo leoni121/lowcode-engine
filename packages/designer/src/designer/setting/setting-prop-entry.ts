@@ -222,6 +222,7 @@ export class SettingPropEntry implements ISettingPropEntry {
       }
     }
     this.notifyValueChange(oldValue, val);
+    debugger
     // 如果 fromSetHotValue，那么在 setHotValue 中已经调用过 valueChange 了
     if (!extraOptions?.fromSetHotValue) {
       this.valueChange(extraOptions);
@@ -329,6 +330,7 @@ export class SettingPropEntry implements ISettingPropEntry {
   }
 
   notifyValueChange(oldValue: any, newValue: any) {
+    debugger
     this.editor.eventBus.emit(GlobalEvent.Node.Prop.Change, {
       node: this.getNode(),
       prop: this,
