@@ -5,6 +5,7 @@ import DesignerPlugin from '@alilc/lowcode-plugin-designer';
 // 注册默认的面板
 export const defaultPanelRegistry = (editor: any) => {
   const fun = (ctx: IPublicModelPluginContext) => {
+    debugger
     return {
       init() {
         const { skeleton, config } = ctx;

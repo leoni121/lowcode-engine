@@ -50,6 +50,7 @@ export default class DesignerPlugin extends PureComponent<PluginProps, DesignerP
   private async setupAssets() {
     const editor = this.props.engineEditor;
     try {
+      debugger
       const assets = await editor.onceGot('assets');
       const renderEnv = engineConfig.get('renderEnv') || editor.get('renderEnv');
       const device = engineConfig.get('device') || editor.get('device');

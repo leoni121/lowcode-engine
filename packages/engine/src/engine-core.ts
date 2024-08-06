@@ -236,6 +236,7 @@ export async function init(
       document.body.appendChild(engineContainer);
     }
   }
+  debugger
   engineConfig.setEngineOptions(engineOptions as any);
 
   const { Workbench } = common.skeletonCabin;

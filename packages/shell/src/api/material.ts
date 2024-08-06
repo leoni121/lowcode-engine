@@ -64,6 +64,7 @@ export class Material implements IPublicApiMaterial {
    * @returns
    */
   async setAssets(assets: IPublicTypeAssetsJson) {
+    debugger
     return await this[editorSymbol].setAssets(assets);
   }
 
