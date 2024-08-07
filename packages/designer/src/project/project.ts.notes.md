@@ -1,7 +1,13 @@
 ## overview
 
-* Export Project class
-* There have many methods used to manage documents in class Project
-* Also, there have some hooks that are related by Renderer and Document
-* When creating a Document instance in the Project class, always pass the project instance to the Document constructor
-* refer to official docs [ProjectModel](https://lowcode-engine.cn/site/docs/guide/design/editor#%E9%A1%B9%E7%9B%AE%E6%A8%A1%E5%9E%8Bproject)
+The `Project` class manages multiple documents and provides functionality for loading, creating, and manipulating documents within the project. It also handles integration with a simulator for previewing and testing the project.
+
+Some key features and methods of the Project class include:
+
+* Managing documents: The Project class allows you to create, open, and retrieve documents within the project. You can also get the current active document and access a list of all documents in the project.
+* Loading and saving: You can **load project data from a schema and save project data to a schema**. This allows you to persist the state of the project.
+* Simulator integration: The Project class provides methods for mounting a simulator, setting up event listeners for simulator readiness, and managing the simulator host.
+* Configuration and internationalization: You can set and retrieve project configuration and internationalization data using the set and get methods.
+* Event handling: The Project class allows you to register event handlers for events such as changes in the current document or simulator readiness.
+
+Overall, the Project class serves as a central hub for managing and manipulating documents.

@@ -1,8 +1,8 @@
 ## Overview
 
-The **Core Class** used by the engine
+The **Class** used by the engine-core(`packages/engine/src/engine-core.ts`), will be exported for users to use.
 
-* From the perspective of **schema**  (`packages/shell/src/model`), the model of the low -code engine is divided into node model, prop model, document model and project model, etc.
+* From the perspective of **schema**  (`packages/shell/src/model`), the model of the low-code engine is divided into node model, prop model, document model and project model, etc.
 * From the perspective of engine composition(`packages/shell/src/api`), low-code engines are divided into materials, UI skeleton, simulator, etc.
 
 ## Exploring Further

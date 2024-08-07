@@ -239,6 +239,7 @@ export async function init(
   debugger
   engineConfig.setEngineOptions(engineOptions as any);
 
+  // refer to https://vscode.dev/github/leoni121/lowcode-engine/blob/deep-dive/packages/shell/src/api/common.tsx#L192
   const { Workbench } = common.skeletonCabin;
   if (options && options.enableWorkspaceMode) {
     const disposeFun = await pluginPromise;
@@ -262,6 +263,7 @@ export async function init(
 
   await plugins.init(pluginPreference as any);
 
+  debugger
   render(
     createElement(Workbench, {
       skeleton: innerSkeleton,
