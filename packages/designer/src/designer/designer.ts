@@ -540,7 +540,6 @@ export class Designer implements IDesigner {
   }
 
   createComponentMeta(data: IPublicTypeComponentMetadata): IComponentMeta | null {
-    debugger
     const key = data.componentName;
     if (!key) {
       return null;

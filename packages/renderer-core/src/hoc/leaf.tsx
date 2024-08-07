@@ -552,6 +552,7 @@ export function leafWrapper(Comp: types.IBaseRenderComponent, {
     }
 
     render() {
+      debugger
       if (!this.state.visible || !this.state.condition) {
         return null;
       }
@@ -572,11 +573,20 @@ export function leafWrapper(Comp: types.IBaseRenderComponent, {
 
       delete compProps.__inner__;
 
+      debugger
       if (this.hasChildren) {
-        return engine.createElement(Comp, compProps, this.children);
+        console.log("nzqnzqnznq")
+      // TODO(zhiqiang.ni@shopee.com): revert
+        return <div className='nzqnzqnznq-left'>
+        {engine.createElement(Comp, compProps, this.children)}
+      </div>;
       }
 
-      return engine.createElement(Comp, compProps);
+      console.log("nzqnzqnznq")
+      // TODO(zhiqiang.ni@shopee.com): revert
+      return <div className='nzqnzqnznq-left'>
+        {engine.createElement(Comp, compProps)}
+      </div>;
     }
   }
 

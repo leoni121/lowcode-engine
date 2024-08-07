@@ -113,6 +113,7 @@ export class SettingField extends SettingPropEntry implements ISettingField {
     config: IPublicTypeFieldConfig,
     private settingFieldCollector?: (name: string | number, field: ISettingField) => void,
   ) {
+    debugger
     super(parent, config.name, config.type);
     makeObservable(this);
     const { title, items, setter, extraProps, ...rest } = config;
@@ -262,6 +263,7 @@ export class SettingField extends SettingPropEntry implements ISettingField {
 
   @action
   setHotValue(data: any, options?: IPublicTypeSetValueOptions) {
+    debugger
     this.hotValue = data;
     const value = this.transducer.toNative(data);
     if (options) {
