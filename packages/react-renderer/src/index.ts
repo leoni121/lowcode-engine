@@ -54,6 +54,7 @@ function factory(): types.IRenderComponent {
     };
 
     constructor(props: types.IRendererProps, context: ContextType<any>) {
+      // debugger
       super(props, context);
     }
 

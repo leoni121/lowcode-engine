@@ -98,6 +98,7 @@ function isMixinComponent(components: any) {
 export function buildComponents(libraryMap: LibraryMap,
   componentsMap: { [componentName: string]: IPublicTypeNpmInfo | ComponentType<any> | IPublicTypeComponentSchema },
   createComponent: (schema: IPublicTypeProjectSchema<IPublicTypeComponentSchema>) => Component | null) {
+    // debugger
   const components: any = {};
   Object.keys(componentsMap).forEach((componentName) => {
     let component = componentsMap[componentName];

@@ -127,7 +127,7 @@ export class Editor extends EventEmitter implements IEditor {
   }
 
   async setAssets(assets: IPublicTypeAssetsJson) {
-    debugger
+    // debugger
     const { components } = assets;
     if (components && components.length) {
       const componentDescriptions: IPublicTypeComponentDescription[] = [];

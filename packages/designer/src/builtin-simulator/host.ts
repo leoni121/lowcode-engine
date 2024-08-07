@@ -284,6 +284,7 @@ export class BuiltinSimulatorHost implements ISimulatorHost<BuiltinSimulatorProp
   private sensing = false;
 
   constructor(project: Project, designer: Designer) {
+    // debugger
     makeObservable(this);
     this.project = project;
     this.designer = designer;
@@ -434,7 +435,7 @@ export class BuiltinSimulatorHost implements ISimulatorHost<BuiltinSimulatorProp
   }
 
   async mountContentFrame(iframe: HTMLIFrameElement | null): Promise<void> {
-    debugger
+    // debugger
     if (!iframe || this._iframe === iframe) {
       return;
     }

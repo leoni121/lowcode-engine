@@ -552,7 +552,7 @@ export function leafWrapper(Comp: types.IBaseRenderComponent, {
     }
 
     render() {
-      debugger
+      // debugger
       if (!this.state.visible || !this.state.condition) {
         return null;
       }
@@ -573,14 +573,17 @@ export function leafWrapper(Comp: types.IBaseRenderComponent, {
 
       delete compProps.__inner__;
 
-      debugger
+      // debugger
       if (this.hasChildren) {
         console.log("nzqnzqnznq")
+        console.log("🚀 ~ LeafHoc ~ render ~ compProps:", compProps)
       // TODO(zhiqiang.ni@shopee.com): revert
         return <div className='nzqnzqnznq-left'>
         {engine.createElement(Comp, compProps, this.children)}
       </div>;
       }
+
+      console.log("🚀 ~ LeafHoc ~ render ~ compProps:", compProps)
 
       console.log("nzqnzqnznq")
       // TODO(zhiqiang.ni@shopee.com): revert

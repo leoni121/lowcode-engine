@@ -164,6 +164,7 @@ class Renderer extends Component<{
 
   render() {
     const { documentInstance, rendererContainer: renderer } = this.props;
+    console.log("🚀 ~ Renderer ~ render ~ documentInstance:", documentInstance.schema)
     const { container, document } = documentInstance;
     const { designMode, device, locale } = container;
     const messages = container.context?.utils?.i18n?.messages || {};

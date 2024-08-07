@@ -19,6 +19,7 @@ export class DesignerView extends Component<IProps> {
     this.viewName = designer?.viewName;
     if (designer) {
       this.designer = designer;
+      // debugger
       designer.setProps(designerProps);
     } else {
       this.designer = new Designer(designerProps);

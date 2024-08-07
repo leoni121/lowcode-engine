@@ -394,7 +394,7 @@ export class Prop implements IProp, IPropParent {
   }: {
     oldValue: IPublicTypeCompositeValue | UNSET;
   }) => {
-    debugger
+    // debugger
     const editor = this.owner.document?.designer.editor;
     const propsInfo = {
       key: this.key,
@@ -403,7 +403,7 @@ export class Prop implements IProp, IPropParent {
       newValue: this.type === 'unset' ? undefined : this._value,
     };
 
-    debugger
+    // debugger
     editor?.eventBus.emit(GlobalEvent.Node.Prop.InnerChange, {
       node: this.owner as any,
       ...propsInfo,

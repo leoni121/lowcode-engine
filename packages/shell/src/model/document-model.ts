@@ -318,7 +318,7 @@ export class DocumentModel implements IPublicModelDocumentModel {
    */
   onChangeNodeProp(fn: (info: IPublicTypePropChangeOptions) => void): IPublicTypeDisposable {
     const callback = (info: GlobalEvent.Node.Prop.ChangeOptions) => {
-      debugger
+      // debugger
       fn({
         key: info.key,
         oldValue: info.oldValue,

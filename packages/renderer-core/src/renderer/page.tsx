@@ -7,6 +7,7 @@ const logger = getLogger({ level: 'warn', bizName: 'renderer-core:page' });
 export default function pageRendererFactory(): IBaseRenderComponent {
   const BaseRenderer = baseRendererFactory();
   return class PageRenderer extends BaseRenderer {
+    
     static displayName = 'PageRenderer';
 
     __namespace = 'page';

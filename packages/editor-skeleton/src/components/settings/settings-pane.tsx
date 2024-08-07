@@ -210,6 +210,7 @@ class SettingFieldView extends Component<SettingFieldViewProps, SettingFieldView
 
   render() {
     const field = this.field;
+    console.log("🚀 ~ SettingFieldView ~ render ~ field:", field)
     const { extraProps } = field;
     const visible = this.visible;
 

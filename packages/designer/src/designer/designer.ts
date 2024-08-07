@@ -412,7 +412,7 @@ export class Designer implements IDesigner {
   }
 
   setProps(nextProps: DesignerProps) {
-    debugger
+    // debugger
     const props = this.props ? { ...this.props, ...nextProps } : nextProps;
     if (this.props) {
       // check hotkeys
@@ -536,6 +536,7 @@ export class Designer implements IDesigner {
   }
 
   buildComponentMetasMap(metas: IPublicTypeComponentMetadata[]) {
+    // debugger;
     metas.forEach((data) => this.createComponentMeta(data));
   }
 

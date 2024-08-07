@@ -116,6 +116,7 @@ export class SettingTopEntry implements ISettingTopEntry {
   private setupComponentMeta() {
     // todo: enhance compile a temp configure.compiled
     const { first } = this;
+    console.log("🚀 ~ SettingTopEntry ~ setupComponentMeta ~ first:", first)
     const meta = first.componentMeta;
     const l = this.nodes.length;
     let theSame = true;
@@ -147,6 +148,8 @@ export class SettingTopEntry implements ISettingTopEntry {
         }
         return new SettingField(this, item as any, settingFieldCollector);
       });
+      console.log("🚀 ~ SettingTopEntry ~ this._items=this.componentMeta.configure.map ~ _items:", this._items)
+
       this._settingFieldMap = settingFieldMap;
     }
   }

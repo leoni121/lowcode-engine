@@ -220,7 +220,7 @@ export class Skeleton implements ISkeleton {
       false,
       true,
     );
-    debugger
+    // debugger
     this.mainArea = new Area(
       this,
       'mainArea',

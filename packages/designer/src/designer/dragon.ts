@@ -186,6 +186,7 @@ export class Dragon implements IDragon {
       const locateEvent = createLocateEvent(e);
       const sensor = chooseSensor(locateEvent);
       if (!sensor || !sensor.getNodeInstanceFromElement) return {};
+      // debugger
       const nodeInst = sensor.getNodeInstanceFromElement(e.target as Element);
       return nodeInst?.node?.getRGL() || {};
     };

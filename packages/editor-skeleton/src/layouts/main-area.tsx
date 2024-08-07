@@ -9,7 +9,7 @@ import { Widget } from '../widget/widget';
 export default class MainArea extends Component<{ area: Area<any, Panel | Widget> }> {
   render() {
     const { area } = this.props;
-    debugger
+    // debugger
     return (
       <div className={classNames('lc-main-area engine-workspacepane')}>
         {area.container.items.map((item) => item.content)}

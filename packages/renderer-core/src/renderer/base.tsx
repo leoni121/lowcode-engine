@@ -156,6 +156,7 @@ export default function baseRendererFactory(): IBaseRenderComponent {
     __styleElement: any;
 
     constructor(props: IBaseRendererProps, context: IBaseRendererContext) {
+      // debugger
       super(props, context);
       this.context = context;
       this.__parseExpression = (str: string, self: any) => {
@@ -522,6 +523,7 @@ export default function baseRendererFactory(): IBaseRenderComponent {
         if (!isSchema(schema)) {
           return null;
         }
+        // debugger
         let Comp = components[schema.componentName] || this.props.__container?.components?.[schema.componentName];
 
         // 容器类组件的上下文通过props传递，避免context传递带来的嵌套问题

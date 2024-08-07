@@ -124,6 +124,7 @@ export default function rendererFactory(): IRenderComponent {
 
     getComp() {
       const { schema, components } = this.props;
+      // debugger
       const { componentName } = schema;
       const allComponents = { ...RENDERER_COMPS, ...components };
       let Comp = allComponents[componentName] || RENDERER_COMPS[`${componentName}Renderer`];
@@ -137,6 +138,7 @@ export default function rendererFactory(): IRenderComponent {
 
     render() {
       const { schema, designMode, appHelper, components } = this.props;
+      console.log("🚀 ~ Renderer ~ render ~ schema:", schema)
       if (isEmpty(schema)) {
         return null;
       }

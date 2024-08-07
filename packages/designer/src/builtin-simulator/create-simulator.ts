@@ -87,6 +87,7 @@ export function createSimulator(
       return scripts[key].join('\n');
     })
     .join('');
+  console.log("🚀 ~ scriptFrags:", scriptFrags)
 
   doc.open();
   doc.write(`

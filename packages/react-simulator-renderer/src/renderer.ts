@@ -360,6 +360,7 @@ export class SimulatorRendererContainer implements BuiltinSimulatorRenderer {
   }
 
   private buildComponents() {
+    // debugger
     this._components = buildComponents(
         this._libraryMap,
         this._componentsMap,
@@ -435,7 +436,10 @@ export class SimulatorRendererContainer implements BuiltinSimulatorRenderer {
       ...schema,
       componentsTree: schema.componentsTree.map(compatibleLegaoSchema),
     };
+    console.log("🚀 ~ SimulatorRendererContainer ~ createComponent ~ _schema:", _schema)
 
+
+    // debugger
     const componentsTreeSchema = _schema.componentsTree[0];
 
     if (componentsTreeSchema.componentName === 'Component' && componentsTreeSchema.css) {
@@ -527,6 +531,7 @@ export class SimulatorRendererContainer implements BuiltinSimulatorRenderer {
   }
 
   dispose() {
+    // debugger
     this.disposeFunctions.forEach((fn) => fn());
     this.documentInstances.forEach((docInst) => docInst.dispose());
     untracked(() => {
