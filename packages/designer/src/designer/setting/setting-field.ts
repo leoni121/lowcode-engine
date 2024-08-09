@@ -232,6 +232,7 @@ export class SettingField extends SettingPropEntry implements ISettingField {
       this.setHotValue(val, extraOptions);
       return;
     }
+    debugger
     super.setValue(val, false, false, extraOptions);
   }
 

@@ -78,6 +78,9 @@ export default function rendererFactory(): IRenderComponent {
     }
 
     async componentDidUpdate() {
+      const { schema } = this.props;
+      debugger
+      console.log("🚀 ~ Renderer ~ componentDidUpdate ~ schema:", schema)
       debug(`entry.componentDidUpdate - ${this.props?.schema?.componentName}`);
     }
 

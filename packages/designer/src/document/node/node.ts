@@ -833,6 +833,7 @@ export class Node<Schema extends IPublicTypeNodeSchema = IPublicTypeNodeSchema> 
    * 设置单个属性值
    */
   setPropValue(path: string, value: any) {
+    debugger // step2: 修改 node 的属性值
     this.getProp(path, true)!.setValue(value);
   }
 
@@ -1357,10 +1358,12 @@ export class Node<Schema extends IPublicTypeNodeSchema = IPublicTypeNodeSchema> 
   }
 
   emitPropChange(val: IPublicTypePropChangeOptions) {
+    debugger // step3: 触发 propChange 事件
     this.emitter?.emit('propChange', val);
   }
 
   onPropChange(func: (info: IPublicTypePropChangeOptions) => void): IPublicTypeDisposable {
+    // debugger 这个函数会在对应的 leaf 组件初始时被调用，用于注册 propChange 事件
     const wrappedFunc = wrapWithEventSwitch(func);
     this.emitter.on('propChange', wrappedFunc);
     return () => {

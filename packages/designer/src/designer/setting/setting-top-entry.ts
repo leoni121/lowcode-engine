@@ -187,6 +187,7 @@ export class SettingTopEntry implements ISettingTopEntry {
    * 设置子级属性值
    */
   setPropValue(propName: string | number, value: any) {
+    debugger // step2: 修改 node 的属性值
     this.nodes.forEach((node) => {
       node.setPropValue(propName.toString(), value);
     });
