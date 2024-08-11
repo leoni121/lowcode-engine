@@ -833,7 +833,7 @@ export class Node<Schema extends IPublicTypeNodeSchema = IPublicTypeNodeSchema> 
    * 设置单个属性值
    */
   setPropValue(path: string, value: any) {
-    debugger // step2: 修改 node 的属性值
+    // debugger // step2: 修改 node 的属性值
     this.getProp(path, true)!.setValue(value);
   }
 
@@ -1358,7 +1358,7 @@ export class Node<Schema extends IPublicTypeNodeSchema = IPublicTypeNodeSchema> 
   }
 
   emitPropChange(val: IPublicTypePropChangeOptions) {
-    debugger // step3: 触发 propChange 事件
+    // debugger // step3: 触发 propChange 事件
     this.emitter?.emit('propChange', val);
   }
 

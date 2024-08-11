@@ -209,7 +209,7 @@ export class SettingPropEntry implements ISettingPropEntry {
   setValue(val: any, isHotValue?: boolean, force?: boolean, extraOptions?: IPublicTypeSetValueOptions) {
     const oldValue = this.getValue();
     if (this.type === 'field') {
-      debugger
+      // debugger
       this.name?.toString() && this.parent.setPropValue(this.name, val);
     }
 

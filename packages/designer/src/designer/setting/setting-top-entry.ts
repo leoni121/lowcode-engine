@@ -116,7 +116,6 @@ export class SettingTopEntry implements ISettingTopEntry {
   private setupComponentMeta() {
     // todo: enhance compile a temp configure.compiled
     const { first } = this;
-    console.log("🚀 ~ SettingTopEntry ~ setupComponentMeta ~ first:", first)
     const meta = first.componentMeta;
     const l = this.nodes.length;
     let theSame = true;
@@ -148,8 +147,6 @@ export class SettingTopEntry implements ISettingTopEntry {
         }
         return new SettingField(this, item as any, settingFieldCollector);
       });
-      console.log("🚀 ~ SettingTopEntry ~ this._items=this.componentMeta.configure.map ~ _items:", this._items)
-
       this._settingFieldMap = settingFieldMap;
     }
   }
@@ -187,7 +184,7 @@ export class SettingTopEntry implements ISettingTopEntry {
    * 设置子级属性值
    */
   setPropValue(propName: string | number, value: any) {
-    debugger // step2: 修改 node 的属性值
+    // debugger // step2: 修改 node 的属性值
     this.nodes.forEach((node) => {
       node.setPropValue(propName.toString(), value);
     });

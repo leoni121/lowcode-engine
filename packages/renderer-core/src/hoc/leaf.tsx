@@ -410,7 +410,7 @@ export function leafWrapper(Comp: types.IBaseRenderComponent, {
     /** 监听参数变化 */
     initOnPropsChangeEvent(leaf = this.leaf): void {
       const handlePropsChange = debounce((propChangeInfo: IPublicTypePropChangeOptions) => {
-        debugger // step4: 修改 node 的属性值之后，需要更新对应的画布节点
+        // debugger // step4: 修改 node 的属性值之后，需要更新对应的画布节点
         const {
           key,
           newValue = null,
@@ -549,7 +549,7 @@ export function leafWrapper(Comp: types.IBaseRenderComponent, {
         return undefined;
       }
 
-      debugger
+      // debugger
       return getNode?.(componentCacheId);
     }
 
@@ -577,15 +577,11 @@ export function leafWrapper(Comp: types.IBaseRenderComponent, {
 
       // debugger
       if (this.hasChildren) {
-        console.log("🚀 ~ LeafHoc ~ render ~ compProps:", compProps)
       // TODO(zhiqiang.ni@shopee.com): revert
         return <div className='nzqnzqnznq-leaf'>
         {engine.createElement(Comp, compProps, this.children)}
       </div>;
       }
-
-      console.log("🚀 ~ LeafHoc ~ render ~ compProps:", compProps)
-
       // TODO(zhiqiang.ni@shopee.com): revert
       return <div className='nzqnzqnznq-leaf'>
         {engine.createElement(Comp, compProps)}

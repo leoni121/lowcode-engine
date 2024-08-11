@@ -79,8 +79,7 @@ export default function rendererFactory(): IRenderComponent {
 
     async componentDidUpdate() {
       const { schema } = this.props;
-      debugger
-      console.log("🚀 ~ Renderer ~ componentDidUpdate ~ schema:", schema)
+      // debugger
       debug(`entry.componentDidUpdate - ${this.props?.schema?.componentName}`);
     }
 
@@ -141,7 +140,6 @@ export default function rendererFactory(): IRenderComponent {
 
     render() {
       const { schema, designMode, appHelper, components } = this.props;
-      console.log("🚀 ~ Renderer ~ render ~ schema:", schema)
       if (isEmpty(schema)) {
         return null;
       }

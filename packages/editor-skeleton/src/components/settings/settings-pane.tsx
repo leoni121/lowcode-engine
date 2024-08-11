@@ -210,7 +210,6 @@ class SettingFieldView extends Component<SettingFieldViewProps, SettingFieldView
 
   render() {
     const field = this.field;
-    console.log("🚀 ~ SettingFieldView ~ render ~ field:", field)
     const { extraProps } = field;
     const visible = this.visible;
 
@@ -261,7 +260,7 @@ class SettingFieldView extends Component<SettingFieldViewProps, SettingFieldView
             // eslint-disable-next-line react/no-unused-state
             value,
           });
-          debugger // step1: 设置器的 onChange 会触发 field 的 setValue
+          // debugger // step1: 设置器的 onChange 会触发 field 的 setValue
           field.setValue(value, true);
           if (onChangeAPI) onChangeAPI(value, field.internalToShellField());
         },

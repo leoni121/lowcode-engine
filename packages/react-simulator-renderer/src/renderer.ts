@@ -436,8 +436,6 @@ export class SimulatorRendererContainer implements BuiltinSimulatorRenderer {
       ...schema,
       componentsTree: schema.componentsTree.map(compatibleLegaoSchema),
     };
-    console.log("🚀 ~ SimulatorRendererContainer ~ createComponent ~ _schema:", _schema)
-
 
     // debugger
     const componentsTreeSchema = _schema.componentsTree[0];
